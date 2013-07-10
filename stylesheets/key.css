@@ -1,0 +1,132 @@
+body {
+  background: #f2f2f2; }
+
+.container {
+  position: relative;
+  width: 1412px;
+  margin: 60px auto; }
+
+.title {
+  color: #aaa; }
+  .title span {
+    font-size: 6em;
+    color: #4c4c4c; }
+  .title a {
+    text-decoration: none;
+    color: #9999ff; }
+  .title a:hover {
+    cursor: pointer; }
+
+.key {
+  width: 60px;
+  height: 60px;
+  background: #005900;
+  margin: 1px;
+  border-radius: 3px;
+  float: left;
+  -webkit-transition: top 0.1s ease-out;
+  -moz-transition: top 0.1s ease-out;
+  transition: top 0.1s ease-out;
+  box-shadow: 0 3px 4px 1px #b2b2b2; }
+  .key:after {
+    content: '';
+    display: block;
+    margin: 2px 9px 13px;
+    height: 45px;
+    border-radius: 5px;
+    background: green; }
+  .key:hover {
+    position: relative;
+    top: 3px; }
+
+.key-tab,
+.key-backslash {
+  width: 91px; }
+
+.key-caps {
+  width: 105px; }
+
+.key-lshift {
+  width: 140px; }
+
+.key-ctrl,
+.key-win,
+.key-alt,
+.key-rightclick {
+  width: 74px; }
+
+.key-back,
+.key-ins {
+  width: 122px; }
+
+.key-enter {
+  width: 139px; }
+
+.key-rshift {
+  width: 166px; }
+
+.key-space {
+  width: 396px; }
+
+.key-padding {
+  opacity: 0; }
+
+.key-plus {
+  height: 122px; }
+  .key-plus:after {
+    height: 107px; }
+
+/* 
+ * Position
+ * ====================
+ */
+.row:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+#area-esc,
+#area-f1,
+#area-f2,
+#area-f3,
+#area-three,
+#area-six,
+#area-arrow,
+#area-num,
+#area-main {
+  position: absolute;
+  top: 0; }
+
+#area-f1 {
+  left: 124px;
+  top: 0; }
+
+#area-f2 {
+  left: 403px;
+  top: 0; }
+
+#area-f3 {
+  left: 682px;
+  top: 0; }
+
+#area-three {
+  left: 954px;
+  top: 0; }
+
+#area-main {
+  top: 86px; }
+
+#area-six {
+  left: 954px;
+  top: 86px; }
+
+#area-arrow {
+  left: 954px;
+  top: 272px; }
+
+#area-num {
+  left: 1164px;
+  top: 86px;
+  width: 248px; }
+  #area-num .key {
+    float: right; }
