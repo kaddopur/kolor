@@ -1,9 +1,5 @@
 @import '../bourbon/bourbon';
 
-$key_color: green;
-$key_gap: 24px;
-
-
 $color_black: black;
 $color_white: white;
 $color_beige: #d1ccbf;
@@ -16,20 +12,24 @@ $color_orange: #f77f00;
 $color_pink: #fbbcc8;
 $color_purple: #ad98da;
 
+$key_color: white;
+$key_gap: 24px;
+$key_color_groove: tint(black, 70%);
+
 /* 
  * Color
  * ====================
  */
 
 .color-black {
-  background: tint($color_black, 15%) !important;
+  background: tint($color_black, 10%) !important;
   &:after{
     background: $color_black !important;
   }
 }
 
 .color-white {
-  background: shade($color_white, 25%) !important;
+  background: shade($color_white, 15%) !important;
   &:after{
     background: $color_white !important;
   }
@@ -105,10 +105,6 @@ body {
   background: shade(white, 5%);
 }
 
-.wrapper {
-  overflow: hidden;
-  float: right;
-}
 .container {
   position: relative;
   width: 62px*22+$key_gap*2;
@@ -135,7 +131,7 @@ body {
 .key {
   width: 60px;
   height: 60px;
-  background: shade($key_color, 30%);
+  background: shade($key_color, 15%);
   margin: 1px;
   border-radius: 3px;
   float: left;
@@ -213,11 +209,22 @@ body {
 
 .row {
   overflow: hidden;
+  background: $key_color_groove;
   &:after {
     content: '';
     display: block;
     clear: both;
   }
+}
+
+.row.row-padding{
+  background: inherit;
+}
+
+.wrapper {
+  overflow: hidden;
+  float: right;
+  background: $key_color_groove;
 }
 
 #area-esc,

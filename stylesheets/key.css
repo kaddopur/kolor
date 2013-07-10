@@ -3,12 +3,12 @@
  * ====================
  */
 .color-black {
-  background: #262626 !important; }
+  background: #191919 !important; }
   .color-black:after {
     background: black !important; }
 
 .color-white {
-  background: #bfbfbf !important; }
+  background: #d8d8d8 !important; }
   .color-white:after {
     background: white !important; }
 
@@ -60,10 +60,6 @@
 body {
   background: #f2f2f2; }
 
-.wrapper {
-  overflow: hidden;
-  float: right; }
-
 .container {
   position: relative;
   width: 1412px;
@@ -83,7 +79,7 @@ body {
 .key {
   width: 60px;
   height: 60px;
-  background: #005900;
+  background: #d8d8d8;
   margin: 1px;
   border-radius: 3px;
   float: left;
@@ -101,7 +97,7 @@ body {
     margin: 2px 9px 13px;
     height: 45px;
     border-radius: 5px;
-    background: green; }
+    background: white; }
   .key:active {
     -webkit-transform: translateY(5px);
     -moz-transform: translateY(5px);
@@ -151,11 +147,20 @@ body {
  * ====================
  */
 .row {
-  overflow: hidden; }
+  overflow: hidden;
+  background: #b2b2b2; }
   .row:after {
     content: '';
     display: block;
     clear: both; }
+
+.row.row-padding {
+  background: inherit; }
+
+.wrapper {
+  overflow: hidden;
+  float: right;
+  background: #b2b2b2; }
 
 #area-esc,
 #area-f1,
