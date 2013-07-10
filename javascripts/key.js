@@ -14,7 +14,7 @@
   };
 
   setPallete = function() {
-    return $('.circle').each(function() {
+    $('.circle').each(function() {
       $(this).css('background', $(this).data('code'));
       return $(this).click(function() {
         paint = $(this).data('color');
@@ -23,6 +23,9 @@
         $("#indicator").css('left', $(this).position().left);
         return $("#indicator").css('color', $(this).data('code'));
       });
+    });
+    return $('#indicator').click(function() {
+      return $('.key').click();
     });
   };
 

@@ -19,6 +19,9 @@ setPallete = ->
       $("#indicator").css('left', $(this).position().left)
       $("#indicator").css('color', $(this).data('code'))
 
+  $('#indicator').click ->
+    $('.key').click()
+
 clearColor = (ele) ->
   ele.removeClass('color-black')
   ele.removeClass('color-white')

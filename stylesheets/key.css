@@ -12,7 +12,8 @@
   height: 24px;
   float: left;
   margin: 0 5px;
-  border-radius: 12px; }
+  border-radius: 12px;
+  cursor: pointer; }
 
 #indicator {
   width: 24px;
@@ -24,7 +25,12 @@
   -webkit-transition: left 0.4s ease-out, color 0.4s 0.3s ease-out;
   -moz-transition: left 0.4s ease-out, color 0.4s 0.3s ease-out;
   transition: left 0.4s ease-out, color 0.4s 0.3s ease-out;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 /* 
  * Color
