@@ -1,5 +1,68 @@
+/* 
+ * Color
+ * ====================
+ */
+.color-black {
+  background: #262626 !important; }
+  .color-black:after {
+    background: black !important; }
+
+.color-white {
+  background: #bfbfbf !important; }
+  .color-white:after {
+    background: white !important; }
+
+.color-beige {
+  background: #9c998f !important; }
+  .color-beige:after {
+    background: #d1ccbf !important; }
+
+.color-gray {
+  background: #706e6a !important; }
+  .color-gray:after {
+    background: #96938e !important; }
+
+.color-red {
+  background: #902a1e !important; }
+  .color-red:after {
+    background: #c13828 !important; }
+
+.color-blue {
+  background: #4684ab !important; }
+  .color-blue:after {
+    background: #5eb0e5 !important; }
+
+.color-green {
+  background: #16872b !important; }
+  .color-green:after {
+    background: #1eb53a !important; }
+
+.color-yellow {
+  background: #baa010 !important; }
+  .color-yellow:after {
+    background: #f9d616 !important; }
+
+.color-orange {
+  background: #b95f00 !important; }
+  .color-orange:after {
+    background: #f77f00 !important; }
+
+.color-pink {
+  background: #bc8d96 !important; }
+  .color-pink:after {
+    background: #fbbcc8 !important; }
+
+.color-purple {
+  background: #8172a3 !important; }
+  .color-purple:after {
+    background: #ad98da !important; }
+
 body {
   background: #f2f2f2; }
+
+.wrapper {
+  overflow: hidden;
+  float: right; }
 
 .container {
   position: relative;
@@ -24,10 +87,14 @@ body {
   margin: 1px;
   border-radius: 3px;
   float: left;
-  -webkit-transition: top 0.1s ease-out;
-  -moz-transition: top 0.1s ease-out;
-  transition: top 0.1s ease-out;
-  box-shadow: 0 3px 4px 1px #b2b2b2; }
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 3px 4px 1px #b2b2b2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .key:after {
     content: '';
     display: block;
@@ -35,9 +102,12 @@ body {
     height: 45px;
     border-radius: 5px;
     background: green; }
-  .key:hover {
-    position: relative;
-    top: 3px; }
+  .key:active {
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px); }
 
 .key-tab,
 .key-backslash {
@@ -80,10 +150,12 @@ body {
  * Position
  * ====================
  */
-.row:after {
-  content: '';
-  display: block;
-  clear: both; }
+.row {
+  overflow: hidden; }
+  .row:after {
+    content: '';
+    display: block;
+    clear: both; }
 
 #area-esc,
 #area-f1,
@@ -128,5 +200,3 @@ body {
   left: 1164px;
   top: 86px;
   width: 248px; }
-  #area-num .key {
-    float: right; }

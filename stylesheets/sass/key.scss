@@ -4,10 +4,111 @@ $key_color: green;
 $key_gap: 24px;
 
 
+$color_black: black;
+$color_white: white;
+$color_beige: #d1ccbf;
+$color_gray: #96938e;
+$color_red: #c13828;
+$color_blue: #5eb0e5;
+$color_green: #1eb53a;
+$color_yellow: #f9d616;
+$color_orange: #f77f00;
+$color_pink: #fbbcc8;
+$color_purple: #ad98da;
+
+/* 
+ * Color
+ * ====================
+ */
+
+.color-black {
+  background: tint($color_black, 15%) !important;
+  &:after{
+    background: $color_black !important;
+  }
+}
+
+.color-white {
+  background: shade($color_white, 25%) !important;
+  &:after{
+    background: $color_white !important;
+  }
+}
+
+.color-beige {
+  background: shade($color_beige, 25%) !important;
+  &:after{
+    background: $color_beige !important;
+  }
+}
+
+.color-gray {
+  background: shade($color_gray, 25%) !important;
+  &:after{
+    background: $color_gray !important;
+  }
+}
+
+.color-red {
+  background: shade($color_red, 25%) !important;
+  &:after{
+    background: $color_red !important;
+  }
+}
+
+.color-blue {
+  background: shade($color_blue, 25%) !important;
+  &:after{
+    background: $color_blue !important;
+  }
+}
+
+.color-green {
+  background: shade($color_green, 25%) !important;
+  &:after{
+    background: $color_green !important;
+  }
+}
+
+.color-yellow {
+  background: shade($color_yellow, 25%) !important;
+  &:after{
+    background: $color_yellow !important;
+  }
+}
+
+.color-orange {
+  background: shade($color_orange, 25%) !important;
+  &:after{
+    background: $color_orange !important;
+  }
+}
+
+.color-pink {
+  background: shade($color_pink, 25%) !important;
+  &:after{
+    background: $color_pink !important;
+  }
+}
+
+.color-purple {
+  background: shade($color_purple, 25%) !important;
+  &:after{
+    background: $color_purple !important;
+  }
+}
+
+
+
+
 body {
   background: shade(white, 5%);
 }
 
+.wrapper {
+  overflow: hidden;
+  float: right;
+}
 .container {
   position: relative;
   width: 62px*22+$key_gap*2;
@@ -48,13 +149,13 @@ body {
     background: $key_color;
   }
 
-  &:hover {
-    position: relative;
-    top: 3px;
+  &:active {
+    @include transform(translateY(5px));
   }
 
-  @include transition (top 0.1s ease-out);
+  @include transition (all 0.1s ease-out);
   @include box-shadow(0 3px 4px 1px shade(white, 30%));
+  @include user-select(none);
 }
 
 .key-tab,
@@ -110,10 +211,13 @@ body {
  * ====================
  */
 
-.row:after {
-  content: '';
-  display: block;
-  clear: both;
+.row {
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 #area-esc,
@@ -167,9 +271,6 @@ body {
   left: $key_gap*2+62px*18;
   top: 62px+$key_gap;
   width: 62px*4;
-  .key {
-    float: right;
-  }
 }
 
 
